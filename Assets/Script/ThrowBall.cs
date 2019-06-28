@@ -23,11 +23,8 @@ public class ThrowBall : MonoBehaviour
         GameObject ThrowThing = Instantiate(ThrowObject);
         ThrowObject.transform.position = mainCamera.transform.position;
         var thR = ThrowThing.GetComponent<Rigidbody>();
-        thR.AddForce(ThrowThing.transform.forward,ForceMode.Impulse);
+        thR.AddForce( new Vector3(0,-1,0) * 1000 ,ForceMode.Impulse);
     } 
 
-
-
-    
 
 }
